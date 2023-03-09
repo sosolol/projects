@@ -1,3 +1,3 @@
-# LUA gta 5 projects
+# gta 5 lua projcets
 
-### https://github.com/Hawk811/Atlas-LUA/blob/main/README.md
+#### https://github.com/Hawk811/Atlas-LUA/blob/main/README.md
