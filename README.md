@@ -2,7 +2,8 @@
 
 ##### ***[Documentation](https://github.com/Hawk811/Atlas-LUA/blob/main/README.md) used in all projects.*** 
 
-<sub>(packed)MP_PSTAT_BOOL0 // Stat with Packed booleans index 0. Takes up to 64 booleans.
+```
+(packed)MP_PSTAT_BOOL0 // Stat with Packed booleans index 0. Takes up to 64 booleans.
 (packed)MP_PSTAT_BOOL1 // Stat with Packed booleans index 1. Takes up to 64 booleans.
 (packed)MP_PSTAT_BOOL2 // Stat with Packed booleans index 2. Takes up to 64 booleans.
 (packed)PSTAT_BOOL0 // Add MP0_ or MP1_ // Character Stat with Packed booleans index 0. Takes up to 64 booleans.
@@ -12239,11 +12240,4 @@
 (packed)HEIST3TATTOOSTAT_BOOL1 // Add MP0_ or MP1_ // Stat with Packed booleans index 0. Takes up to 64 booleans.
 
 (int)ARC_PROPERTY_EARNINGS // Add MP0_ or MP1_ // Arcade property earnings
-
-(int)ADMIN_CLOTHES_RM_BS_29 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-(int)ADMIN_CLOTHES_GV_BS_29 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-(int)ADMIN_CLOTHES_RM_BS_30 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-(int)ADMIN_CLOTHES_GV_BS_30 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-(int)ADMIN_CLOTHES_RM_BS_31 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-(int)ADMIN_CLOTHES_GV_BS_31 // Add MP0_ or MP1_ // REMOVE THE TANK BY THE SCADMIN
-</sub>
+```
