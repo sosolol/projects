@@ -2,6 +2,7 @@
 
 ##### ***[Documentation](https://github.com/Hawk811/Atlas-LUA/blob/main/README.md) used in all projects.*** 
 
+- **STATS**
 ```
 (packed)MP_PSTAT_BOOL0 // Stat with Packed booleans index 0. Takes up to 64 booleans.
 (packed)MP_PSTAT_BOOL1 // Stat with Packed booleans index 1. Takes up to 64 booleans.
