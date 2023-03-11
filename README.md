@@ -4,5 +4,8 @@
 
 - **STATS**
 ```
-https://gist.githubusercontent.com/1337Nexo/945fe9724b9dd20d33e7afeabd2746dc/raw/46af3968b55677688a1bc98798adcd174e72e48d/stats.txt
+https://raw.githubusercontent.com/sosolol/projects/main/stats.txt
+```
+- **NATIVES**
+```
 ```
