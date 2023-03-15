@@ -1,10 +1,6 @@
-# zes lua projects
+# zes#0001 / soso lua projects
 
-- **STATS**
+- **WEBSITE**
 ```
-https://raw.githubusercontent.com/sosolol/projects/main/stats
-```
-- **NATIVES**
-```
-https://raw.githubusercontent.com/sosolol/projects/main/natives
+https://encrypts.lol
 ```
