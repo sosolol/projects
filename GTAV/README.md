@@ -4,9 +4,9 @@
 
 - **STATS**
 ```
-https://raw.githubusercontent.com/sosolol/projects/main/stats
+https://raw.githubusercontent.com/sosolol/projects/GTAV/main/stats
 ```
 - **NATIVES**
 ```
-https://raw.githubusercontent.com/sosolol/projects/main/natives
+https://raw.githubusercontent.com/sosolol/projects/main/GTAV/natives
 ```
