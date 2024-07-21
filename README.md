@@ -10,21 +10,25 @@ Most of these projects use Node.JS and will require a latest build, if some of t
 
 Listed below are the mainly required software needed.
 
-```
-[Nodejs](https://nodejs.org/en)
-[Git](https://git-scm.com/)
-[Python](https://www.python.org/)
-[Visual Studio Code](https://code.visualstudio.com/)
-```
+* [Nodejs](https://nodejs.org/en)
+* [Git](https://git-scm.com/)
+* [Python](https://www.python.org/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+
 
 ### Installing
 
 A step by step on how to install required modules.
 
-```
-If the project you're installing has a "Package.json" file, you will need to run command "npm i" whilst inside the directory. This will install all the required packages for this project.
 
-If the project you're install has a "Requirements.txt" file, you will need to run command "pip install -r requirements.txt" whilst inside the directory. This will install all the required packages for this project.
+How to install Node.JS Modules (If a Package.json file is present)
+```js
+npm i
+```
+
+How to install Python packages (If a requirements.txt file is present)
+```
+pip install -r requirements.txt
 ```
 
 ## Authors
