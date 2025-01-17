@@ -917,6 +917,7 @@ function library:init()
                 Position = indicator.position;
                 ThemeColor = 'Background';
                 ZIndex = z;
+                CornerRadius = UDim.new(0, 10);
             })
 
             objs.border1 = utility:Draw('Square', {
