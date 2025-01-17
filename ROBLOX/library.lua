@@ -917,6 +917,7 @@ function library:init()
                 Position = indicator.position;
                 ThemeColor = 'Background';
                 ZIndex = z;
+                NumSides = 4;
                 Radius = 8;
             })
 
