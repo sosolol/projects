@@ -912,15 +912,12 @@ function library:init()
             local z = self.zindexOrder.indicator;
             local objs = indicator.objects;
 
-            objs.background = utility:Draw('Square', {
+            objs.background = utility:Draw('Circle', {
                 Size = newUDim2(0, 200, 0, 16);
                 Position = indicator.position;
                 ThemeColor = 'Background';
                 ZIndex = z;
-            })
-            objs.corner = utility:Draw('CornerRadius', {
-                CornerRadius = 12; -- Adjust radius as needed
-                Parent = objs.background;
+                Radius = 8;
             })
 
             objs.border1 = utility:Draw('Square', {
