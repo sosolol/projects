@@ -917,7 +917,7 @@ function library:init()
                 Position = indicator.position;
                 ThemeColor = 'Background';
                 ZIndex = z;
-                CornerRadius = UDim.new(0, 10);
+                CornerRadius = UDim.new(0, 50);
             })
 
             objs.border1 = utility:Draw('Square', {
@@ -926,6 +926,7 @@ function library:init()
                 ThemeColor = 'Border 2';
                 Parent = objs.background;
                 ZIndex = z-1;
+                CornerRadius = UDim.new(0, 50);
             })
 
             objs.border2 = utility:Draw('Square', {
@@ -934,6 +935,7 @@ function library:init()
                 ThemeColor = 'Border 3';
                 Parent = objs.border1;
                 ZIndex = z-2;
+                CornerRadius = UDim.new(0, 50);
             })
 
             objs.topborder = utility:Draw('Square', {
@@ -4682,17 +4684,6 @@ function library:CreateSettingsTab(menu)
     mainSection:AddButton({text = 'Unload', confirm = true, callback = function()
         library:Unload();
     end})
-
-    mainSection:AddSeparator({text = 'Keybinds'});
-    mainSection:AddToggle({text = 'Keybind Indicator', flag = 'keybind_indicator', callback = function(bool)
-        library.keyIndicator:SetEnabled(bool);
-    end})
-    mainSection:AddSlider({text = 'Position X', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5, callback = function()
-        library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
-    end});
-    mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 35, callback = function()
-        library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
-    end});
 
     local themeStrings = {};
     for _,v in next, library.themes do
