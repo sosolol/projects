@@ -658,10 +658,10 @@ do -- Library
 				Dragging = { false, UDim2.new(0, 0, 0, 0) };
 			};
 			
-			local FentFun = Instance.new("ScreenGui", Path)
-			FentFun.Name = "fent.fun"
-			FentFun.DisplayOrder = 1000
-			FentFun.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			local Geekwtf = Instance.new("ScreenGui", Path)
+			Geekwtf.Name = "geek.wtf"
+			Geekwtf.DisplayOrder = 1000
+			Geekwtf.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 			local ImageLabel = Instance.new("ImageLabel")
 			ImageLabel.Name = "ImageLabel"
@@ -706,6 +706,21 @@ do -- Library
 			Logo.Position = UDim2.new(0, 5, 0.5, 0)
 			Logo.Size = UDim2.new(0, 20, 0, 20)
 			Logo.Parent = TopFrame
+
+            local CheatName = Library:NewInstance("TextLabel", true)
+			CheatName.Name = "Name"
+			CheatName.AnchorPoint = Vector2.new(0, 0.5)
+			CheatName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			CheatName.BackgroundTransparency = 1
+			CheatName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			CheatName.BorderSizePixel = 0
+            CheatName.FontFace = menu_font
+            CheatName.RichText = true
+            CheatName.Text = '<font color="rgb(255,255,255)">geek.</font>wtf <font color="rgb(255,255,255)">| v0.1.2 Private</font>'
+            CheatName.TextSize = 11
+			CheatName.Position = UDim2.new(0.16, 0, 0.5, 0)
+			CheatName.Size = UDim2.new(0, 20, 0, 20)
+			CheatName.Parent = TopFrame
 
 			TopFrame.Parent = MainFrame
 
@@ -799,7 +814,7 @@ do -- Library
 
 			Holder.Parent = ImageLabel
 
-			ImageLabel.Parent = FentFun
+			ImageLabel.Parent = Geekwtf
 
 			Window.Elements = {
 				TabHolder = Tabs,
@@ -859,7 +874,7 @@ do -- Library
 				Background.Size = UDim2.new(0, 180, 0, 24)
 				Background.Visible = false
 				Background.AutomaticSize = Enum.AutomaticSize.XY
-				Background.Parent = FentFun
+				Background.Parent = Geekwtf
 
 				Gradient.Name = "Gradient"
 				Gradient.Parent = Background
@@ -4049,3 +4064,5 @@ do
 end
 
 Notifications:Notification("Loaded geek.wtf in approxiametely: " .. math.floor(tick() - Tick) .. " seconds", 5, Library.Accent, false)
+
+return Library
