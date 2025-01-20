@@ -1171,7 +1171,6 @@ do -- Library
 			NewSection.Name = "NewSection"
             NewSection.AutomaticCanvasSize = Enum.AutomaticSize.Y
 			NewSection.BottomImage = "rbxassetid://7783554086"
-			NewSection.CanvasSize = UDim2.new()
 			NewSection.MidImage = "rbxassetid://7783554086"
 			NewSection.ScrollBarImageColor3 = Library.Accent
 			NewSection.ScrollBarThickness = 1
