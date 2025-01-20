@@ -1167,7 +1167,7 @@ do -- Library
 				Sections = {},
 			}
 			
-			local NewSection = Instance.new("Frame")
+			local NewSection = Instance.new("SlidingFrame")
 			NewSection.Name = "NewSection"
 			NewSection.AutomaticSize = Enum.AutomaticSize.Y
 			NewSection.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
