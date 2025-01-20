@@ -735,7 +735,7 @@ do -- Library
 
 			local Tabs = Instance.new("Frame")
 			Tabs.Name = "Tabs"
-			Tabs.Size = UDim2.new(0, 80,1, -25)
+			Tabs.Size = UDim2.new(0, 50, 1, -25)
 			Tabs.BackgroundColor3 = Color3.new(1,1,1)
 			Tabs.BackgroundTransparency = 1
 			Tabs.BorderSizePixel = 0
@@ -1027,57 +1027,67 @@ do -- Library
 			}
 			
 			local NewTab = Instance.new("TextButton")
-			NewTab.Name = "NewTab"
-			NewTab.FontFace = menu_font
-			NewTab.Text = ""
-			NewTab.TextColor3 = Color3.fromRGB(0, 0, 0)
-			NewTab.TextSize = 7
-			NewTab.AutoButtonColor = false
-			NewTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			NewTab.BackgroundTransparency = 1
-			NewTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			NewTab.BorderSizePixel = 0
-			NewTab.Size = UDim2.new(1, 0, 0, 70)
-			NewTab.Parent = Page.Window.Elements.TabHolder
+            NewTab.Name = "NewTab"
+            NewTab.FontFace = menu_font
+            NewTab.Text = ""
+            NewTab.TextColor3 = Color3.fromRGB(0, 0, 0)
+            NewTab.TextSize = 7
+            NewTab.AutoButtonColor = false
+            NewTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            NewTab.BackgroundTransparency = 1
+            NewTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            NewTab.BorderSizePixel = 0
+            NewTab.Size = UDim2.new(1, 0, 0, 70)
+            NewTab.Parent = Page.Window.Elements.TabHolder
 
-			local AccentLine = Library:NewInstance("Frame", true)
-			AccentLine.Name = "AccentLine"
-			AccentLine.BackgroundColor3 = Library.Accent
-			AccentLine.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			AccentLine.BorderSizePixel = 0
-			AccentLine.Size = UDim2.new(0, 2, 1, 0)
-			AccentLine.Visible = true
-			AccentLine.BackgroundTransparency = 1
-			AccentLine.Parent = NewTab
+            local AccentLine = Library:NewInstance("Frame", true)
+            AccentLine.Name = "AccentLine"
+            AccentLine.BackgroundColor3 = Library.Accent
+            AccentLine.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            AccentLine.BorderSizePixel = 0
+            AccentLine.Size = UDim2.new(0, 2, 1, 0)
+            AccentLine.Visible = true
+            AccentLine.BackgroundTransparency = 1
+            AccentLine.Parent = NewTab
 
-			local Name = Instance.new("TextLabel")
-			Name.Name = "Name"
-			Name.FontFace = menu_font
-			Name.Text = Page.Name
-			Name.TextColor3 = Color3.fromRGB(200, 200, 200)
-			Name.TextSize = Library.FSize
-			Name.TextStrokeTransparency = 0
-			Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Name.BackgroundTransparency = 1
-			Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Name.BorderSizePixel = 0
-			Name.Position = UDim2.new(0, 0, 1, -22)
-			Name.Size = UDim2.new(1, 0, 0, 10)
-			Name.Parent = NewTab
+            local Name = Instance.new("TextLabel")
+            Name.Name = "Name"
+            Name.FontFace = menu_font
+            Name.Text = Page.Name
+            Name.TextColor3 = Color3.fromRGB(200, 200, 200)
+            Name.TextSize = Library.FSize
+            Name.TextStrokeTransparency = 0
+            Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Name.BackgroundTransparency = 1
+            Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            Name.BorderSizePixel = 0
+            Name.Position = UDim2.new(0, 0, 1, -22)
+            Name.Size = UDim2.new(1, 0, 0, 10)
+            Name.TextTransparency = 1
+            Name.Parent = NewTab
 
-			local ImageLabel = Instance.new("ImageLabel")
-			ImageLabel.Name = "ImageLabel"
-			ImageLabel.Image = Page.Icon
-			ImageLabel.ScaleType = Enum.ScaleType.Fit
-			ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			ImageLabel.BackgroundTransparency = 1
-			ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			ImageLabel.BorderSizePixel = 0
-			ImageLabel.ImageColor3 = Color3.fromRGB(200, 200, 200)
-			ImageLabel.Position = UDim2.new(0.5, 0, 0.5, -6)
-			ImageLabel.Size = UDim2.new(0, 25, 0, 25)
-			ImageLabel.Parent = NewTab
+            local ImageLabel = Instance.new("ImageLabel")
+            ImageLabel.Name = "ImageLabel"
+            ImageLabel.Image = Page.Icon
+            ImageLabel.ScaleType = Enum.ScaleType.Fit
+            ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+            ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            ImageLabel.BackgroundTransparency = 1
+            ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            ImageLabel.BorderSizePixel = 0
+            ImageLabel.ImageColor3 = Color3.fromRGB(200, 200, 200)
+            ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+            ImageLabel.Size = UDim2.new(0, 25, 0, 25)
+            ImageLabel.Parent = NewTab
+
+            NewTab.MouseEnter:Connect(function()
+                TweenService:Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+                createTween(Name, {TextTransparency = 0}, 0.5):Play()
+            end)
+
+            NewTab.MouseLeave:Connect(function()
+                TweenService:Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+            end)
 
 			local NewPage = Instance.new("ScrollingFrame")
 			NewPage.Name = "NewPage"
