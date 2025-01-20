@@ -735,7 +735,7 @@ do -- Library
 
 			local Tabs = Instance.new("Frame")
 			Tabs.Name = "Tabs"
-			Tabs.Size = UDim2.new(0, 50, 1, -25)
+			Tabs.Size = UDim2.new(0, 55, 1, -25)
 			Tabs.BackgroundColor3 = Color3.new(1,1,1)
 			Tabs.BackgroundTransparency = 1
 			Tabs.BorderSizePixel = 0
@@ -1079,15 +1079,6 @@ do -- Library
             ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
             ImageLabel.Size = UDim2.new(0, 25, 0, 25)
             ImageLabel.Parent = NewTab
-
-            NewTab.MouseEnter:Connect(function()
-                TweenService:Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
-                createTween(Name, {TextTransparency = 0}, 0.5):Play()
-            end)
-
-            NewTab.MouseLeave:Connect(function()
-                TweenService:Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
-            end)
 
 			local NewPage = Instance.new("ScrollingFrame")
 			NewPage.Name = "NewPage"
