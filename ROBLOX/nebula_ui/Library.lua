@@ -1074,8 +1074,17 @@ do -- Library
 			ImageLabel.Size = UDim2.new(0, 25, 0, 25)
 			ImageLabel.Parent = NewTab
 
-			local NewPage = Instance.new("Frame")
+			local NewPage = Instance.new("ScrollingFrame")
 			NewPage.Name = "NewPage"
+            NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
+			NewPage.BottomImage = "rbxassetid://7783554086"
+			NewPage.CanvasSize = UDim2.new()
+			NewPage.MidImage = "rbxassetid://7783554086"
+			NewPage.ScrollBarImageColor3 = Library.Accent
+			NewPage.ScrollBarThickness = 0
+			NewPage.TopImage = "rbxassetid://7783554086"
+			NewPage.Active = true
+			NewPage.AutomaticSize = Enum.AutomaticSize.Y
 			NewPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			NewPage.BackgroundTransparency = 1
 			NewPage.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1167,15 +1176,8 @@ do -- Library
 				Sections = {},
 			}
 			
-			local NewSection = Instance.new("ScrollingFrame")
+			local NewSection = Instance.new("Frame")
 			NewSection.Name = "NewSection"
-            NewSection.AutomaticCanvasSize = Enum.AutomaticSize.Y
-			NewSection.BottomImage = "rbxassetid://7783554086"
-			NewSection.MidImage = "rbxassetid://7783554086"
-			NewSection.ScrollBarImageColor3 = Library.Accent
-			NewSection.ScrollBarThickness = 1
-			NewSection.TopImage = "rbxassetid://7783554086"
-			NewSection.Active = true
 			NewSection.AutomaticSize = Enum.AutomaticSize.Y
 			NewSection.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			NewSection.BorderColor3 = Color3.fromRGB(30, 30, 30)
