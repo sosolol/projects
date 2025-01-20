@@ -686,12 +686,20 @@ do -- Library
 			MainFrame.AutoButtonColor = false
 			Library.Holder = ImageLabel
 
+            local Corner1 = Instance.new("UICorner")
+            Corner1.CornerRadius = Vector2.new(0, 6)
+            Corner1.Parent = MainFrame
+
 			local TopFrame = Instance.new("Frame")
 			TopFrame.Name = "TopFrame"
 			TopFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			TopFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			TopFrame.BorderSizePixel = 0
 			TopFrame.Size = UDim2.new(1, 0, 0, 25)
+
+            local Corner2 = Instance.new("UICorner")
+            Corner2.CornerRadius = Vector2.new(0, 6)
+            Corner2.Parent = TopFrame
 
 			local Logo = Library:NewInstance("ImageLabel", true)
 			Logo.Name = "Logo"
@@ -1078,7 +1086,6 @@ do -- Library
 			NewPage.Name = "NewPage"
             NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
 			NewPage.BottomImage = "rbxassetid://7783554086"
-			NewPage.CanvasSize = UDim2.new()
 			NewPage.MidImage = "rbxassetid://7783554086"
 			NewPage.ScrollBarImageColor3 = Library.Accent
 			NewPage.ScrollBarThickness = 0
