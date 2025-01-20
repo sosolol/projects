@@ -684,6 +684,7 @@ do -- Library
 			MainFrame.ZIndex = 10
 			MainFrame.Text = ""
 			MainFrame.AutoButtonColor = false
+            MainFrame.ClipsDescendants = true
 			Library.Holder = ImageLabel
 
             local Corner1 = Instance.new("UICorner")
@@ -732,17 +733,13 @@ do -- Library
 
 			TopFrame.Parent = MainFrame
 
-			local Tabs = Instance.new("ScrollingFrame")
+			local Tabs = Instance.new("Frame")
 			Tabs.Name = "Tabs"
 			Tabs.Size = UDim2.new(0, 80,1, -25)
 			Tabs.BackgroundColor3 = Color3.new(1,1,1)
 			Tabs.BackgroundTransparency = 1
 			Tabs.BorderSizePixel = 0
 			Tabs.BorderColor3 = Color3.new(0,0,0)
-			Tabs.ScrollBarThickness = 2 
-			Tabs.ScrollBarImageColor3 = Library.Accent
-			Tabs.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
-			Tabs.CanvasSize = UDim2.new(0, 0, 1.15, 0)
 			Tabs.Position = UDim2.new(0, 0, 0, 25)
 			table.insert(Library.ThemeObjects, Tabs)
 
@@ -1087,6 +1084,7 @@ do -- Library
             NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
 			NewPage.BottomImage = "rbxassetid://7783554086"
 			NewPage.MidImage = "rbxassetid://7783554086"
+            NewPage.CanvasSize = UDim2.new(0, 0, 1.35, 0)
 			NewPage.ScrollBarImageColor3 = Library.Accent
 			NewPage.ScrollBarThickness = 0
 			NewPage.TopImage = "rbxassetid://7783554086"
