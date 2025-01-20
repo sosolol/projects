@@ -1167,8 +1167,16 @@ do -- Library
 				Sections = {},
 			}
 			
-			local NewSection = Instance.new("SlidingFrame")
+			local NewSection = Instance.new("ScrollingFrame")
 			NewSection.Name = "NewSection"
+            NewSection.AutomaticCanvasSize = Enum.AutomaticSize.Y
+			NewSection.BottomImage = "rbxassetid://7783554086"
+			NewSection.CanvasSize = UDim2.new()
+			NewSection.MidImage = "rbxassetid://7783554086"
+			NewSection.ScrollBarImageColor3 = Library.Accent
+			NewSection.ScrollBarThickness = 1
+			NewSection.TopImage = "rbxassetid://7783554086"
+			NewSection.Active = true
 			NewSection.AutomaticSize = Enum.AutomaticSize.Y
 			NewSection.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			NewSection.BorderColor3 = Color3.fromRGB(30, 30, 30)
