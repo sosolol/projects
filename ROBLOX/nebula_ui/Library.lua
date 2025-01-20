@@ -687,7 +687,7 @@ do -- Library
 			Library.Holder = ImageLabel
 
             local Corner1 = Instance.new("UICorner")
-            Corner1.CornerRadius = Vector2.new(0, 6)
+            Corner1.CornerRadius = UDim.new(0, 6)
             Corner1.Parent = MainFrame
 
 			local TopFrame = Instance.new("Frame")
@@ -698,7 +698,7 @@ do -- Library
 			TopFrame.Size = UDim2.new(1, 0, 0, 25)
 
             local Corner2 = Instance.new("UICorner")
-            Corner2.CornerRadius = Vector2.new(0, 6)
+            Corner2.CornerRadius = UDim.new(0, 6)
             Corner2.Parent = TopFrame
 
 			local Logo = Library:NewInstance("ImageLabel", true)
