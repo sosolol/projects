@@ -2505,6 +2505,7 @@ do -- Library
 			function Dropdown:Refresh(tbl)
 				for _, opt in next, Dropdown.OptionInsts do
 					coroutine.wrap(function()
+                        print(opt)
 						opt.button:Destroy()
 					end)()
 				end
