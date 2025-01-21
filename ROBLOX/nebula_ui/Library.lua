@@ -2503,10 +2503,11 @@ do -- Library
 			end
 			
 			function Dropdown:Refresh(tbl)
-				for _, opt in next, Dropdown.OptionInsts do
+				for opt, tbl in next, Dropdown.OptionInsts do
 					coroutine.wrap(function()
-                        print(opt)
-						opt.button:Destroy()
+						tbl.text.Parent:remove()
+						
+                        --tbl.Parent:remove()
 					end)()
 				end
 
