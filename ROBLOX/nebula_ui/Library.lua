@@ -4078,4 +4078,7 @@ do
 	end
 end
 
+
+Notifications:Notification("Loaded geek.wtf in: " .. math.floor(tick() - Tick) .. " seconds", 5, Library.Accent, false)
+
 return Library, Notifications
