@@ -2504,11 +2504,7 @@ do -- Library
 			
 			function Dropdown:Refresh(tbl)
 				for _, opt in next, Dropdown.OptionInsts do
-					coroutine.wrap(function()
-                        if opt:IsA("TextButton") then
-                            opt.button:Destroy()
-                        end
-					end)()
+
 				end
 				table.clear(Dropdown.OptionInsts)
 
