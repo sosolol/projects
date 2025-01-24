@@ -280,41 +280,20 @@ do
 			Library.Holder.Visible = Bool
 		
 			local Lighting = game:GetService("Lighting")
-			-- Add blur effect
-			if Bool then
-				if not Lighting:FindFirstChild("UIBlur") then
-					local Blur = Instance.new("BlurEffect")
-					Blur.Name = "UIBlur"
-					Blur.Size = 15
-					Blur.Parent = Lighting
-				end
-			else
-				local Blur = Lighting:FindFirstChild("UIBlur")
-				if Blur then
-					Blur:Destroy()
-				end
-			end
+			local TweenService = game:GetService("TweenService")
 		
-			-- Add rain effect
+			local Blur = Lighting:FindFirstChild("UIBlur")
 			if Bool then
-				if not Library.Holder:FindFirstChild("RainEffect") then
-					local RainEffect = Instance.new("ParticleEmitter")
-					RainEffect.Name = "RainEffect"
-					RainEffect.Texture = "http://www.roblox.com/asset/?id=6026542734" -- Example rain particle
-					RainEffect.Size = NumberSequence.new(0.5)
-					RainEffect.Rate = 50
-					RainEffect.Speed = NumberRange.new(20, 30)
-					RainEffect.Lifetime = NumberRange.new(1, 2)
-					RainEffect.Enabled = true
-					RainEffect.Parent = Library.Holder
+				if Blur then
+					Blur.Enabled = true
 				end
 			else
-				local RainEffect = Library.Holder:FindFirstChild("RainEffect")
-				if RainEffect then
-					RainEffect:Destroy()
+				if Blur then
+					Blur.Enabled = false
 				end
 			end
 		end
+		
 	end;
 
 
@@ -687,6 +666,14 @@ do
 		local Sections = Library.Sections;
 		
 		function Library:Window(Options)
+			local Lighting = game:GetService("Lighting")
+
+			local Blur = Instance.new("BlurEffect")
+			Blur.Name = "UIBlur"
+			Blur.Size = 15
+			Blur.Enabled = true
+			Blur.Parent = Lighting
+
 			local Window = {
 				Pages = {};
 				Sections = {};
