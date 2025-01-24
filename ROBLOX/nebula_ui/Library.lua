@@ -7,9 +7,9 @@ repeat wait() until game:IsLoaded();
 
 local Tick = tick()
 
--- Custom Fonts
+local geek_folder = isfolder("geek.wtf") or makefolder("geek.wtf")
+
 do 
-	-- 
 	writefile("smallest_pixel.ttf", game:HttpGet("https://github.com/f1nobe7650/other/raw/main/ProggyTiny.ttf"))
 	-- 
 	local smallest_pixel = {
@@ -24,12 +24,12 @@ do
 		}
 	}
 
-	writefile("menu_font.font", game:GetService("HttpService"):JSONEncode(smallest_pixel))
+	writefile("geek.wtf/menu_font.font", game:GetService("HttpService"):JSONEncode(smallest_pixel))
 
 	getgenv().menu_font = Font.new(getcustomasset("menu_font.font"), Enum.FontWeight.Regular)
 end; 
 
-do -- Library
+do
 	Library = {
 		Open = true;
 		Accent = Color3.fromRGB(132, 108, 188);
@@ -278,6 +278,42 @@ do -- Library
 		function Library:Toggle(Bool)
 			self.Open = Bool
 			Library.Holder.Visible = Bool
+		
+			local Lighting = game:GetService("Lighting")
+			-- Add blur effect
+			if Bool then
+				if not Lighting:FindFirstChild("UIBlur") then
+					local Blur = Instance.new("BlurEffect")
+					Blur.Name = "UIBlur"
+					Blur.Size = 15
+					Blur.Parent = Lighting
+				end
+			else
+				local Blur = Lighting:FindFirstChild("UIBlur")
+				if Blur then
+					Blur:Destroy()
+				end
+			end
+		
+			-- Add rain effect
+			if Bool then
+				if not Library.Holder:FindFirstChild("RainEffect") then
+					local RainEffect = Instance.new("ParticleEmitter")
+					RainEffect.Name = "RainEffect"
+					RainEffect.Texture = "http://www.roblox.com/asset/?id=6026542734" -- Example rain particle
+					RainEffect.Size = NumberSequence.new(0.5)
+					RainEffect.Rate = 50
+					RainEffect.Speed = NumberRange.new(20, 30)
+					RainEffect.Lifetime = NumberRange.new(1, 2)
+					RainEffect.Enabled = true
+					RainEffect.Parent = Library.Holder
+				end
+			else
+				local RainEffect = Library.Holder:FindFirstChild("RainEffect")
+				if RainEffect then
+					RainEffect:Destroy()
+				end
+			end
 		end
 	end;
 
