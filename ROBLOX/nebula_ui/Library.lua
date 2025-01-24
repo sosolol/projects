@@ -10,7 +10,7 @@ local Tick = tick()
 local geek_folder = isfolder("geek.wtf") or makefolder("geek.wtf")
 
 do 
-	writefile("smallest_pixel.ttf", game:HttpGet("https://github.com/f1nobe7650/other/raw/main/ProggyTiny.ttf"))
+	writefile("geek.wtf/fonts/smallest_pixel.ttf", game:HttpGet("https://github.com/f1nobe7650/other/raw/main/ProggyTiny.ttf"))
 	-- 
 	local smallest_pixel = {
 		name = "SmallestPixel7",
@@ -19,14 +19,14 @@ do
 				name = "Regular",
 				weight = 400,
 				style = "normal",
-				assetId = getcustomasset("smallest_pixel.ttf")
+				assetId = getcustomasset("geek.wtf/fonts/smallest_pixel.ttf")
 			}
 		}
 	}
 
-	writefile("geek.wtf/menu_font.font", game:GetService("HttpService"):JSONEncode(smallest_pixel))
+	writefile("geek.wtf/fonts/menu_font.font", game:GetService("HttpService"):JSONEncode(smallest_pixel))
 
-	getgenv().menu_font = Font.new(getcustomasset("menu_font.font"), Enum.FontWeight.Regular)
+	getgenv().menu_font = Font.new(getcustomasset("geek.wtf/fonts/menu_font.font"), Enum.FontWeight.Regular)
 end; 
 
 do
@@ -280,16 +280,18 @@ do
 			Library.Holder.Visible = Bool
 		
 			local Lighting = game:GetService("Lighting")
-			local TweenService = game:GetService("TweenService")
-		
-			local Blur = Lighting:FindFirstChild("UIBlur")
+			
 			if Bool then
-				if Blur then
-					Blur.Enabled = true
+				if not Lighting:FindFirstChild("UIBlur") then
+					local Blur = Instance.new("BlurEffect")
+					Blur.Name = "UIBlur"
+					Blur.Size = 15
+					Blur.Parent = Lighting
 				end
 			else
+				local Blur = Lighting:FindFirstChild("UIBlur")
 				if Blur then
-					Blur.Enabled = false
+					Blur:Destroy()
 				end
 			end
 		end
