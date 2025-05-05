@@ -10,7 +10,7 @@ local Tick = tick()
 local geek_folder = isfolder("geek.wtf") or makefolder("geek.wtf")
 
 do 
-	writefile("geek.wtf/fonts/smallest_pixel.ttf", game:HttpGet("https://github.com/f1nobe7650/other/raw/main/ProggyTiny.ttf"))
+	writefile("geek.wtf/fonts/smallest_pixel.ttf", game:HttpGet("https://github.com/ocornut/imgui/raw/refs/heads/master/misc/fonts/ProggyTiny.ttf"))
 	-- 
 	local smallest_pixel = {
 		name = "SmallestPixel7",
